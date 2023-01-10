@@ -2,7 +2,7 @@
 
 ##### To run 10000 tests on a trained model go to cmd and navigate to the directory of the project.
 
-'''
+'''python
 c:\user\projectFolder\blackjack> python
 >>> from Blackjack import *
 >>> wins, losses, ties = test_model( "blackjackmodel.7", 10000, False, 2, True, False )
