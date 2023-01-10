@@ -7,7 +7,7 @@ c:\user\projectFolder\blackjack> python
 .
 .
 .
->>> wins, losses, ties = test_model( "blackjackmodel.5", 10000, False, 2, True, False )
+>>> wins, losses, ties = test_model( "blackjackmodel.7", 10000, False, 2, True, False )
 .
 .
 .

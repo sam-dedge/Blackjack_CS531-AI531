@@ -325,11 +325,11 @@ def test_model( model_name, num_of_tests, fresh_deck, level, betting, debug ):
 	flat_bet = 10
 
 	# deserialize model
-	json_file = open('models/'+model_name+'.json', 'r')
+	json_file = open(model_name+'.json', 'r')
 	loaded_model_json = json_file.read()
 	json_file.close()
 	model = tf.keras.models.model_from_json( loaded_model_json, custom_objects={"GlorotUniform": tf.keras.initializers.glorot_uniform} )
-	model.load_weights( "models/"+model_name+".h5" )
+	model.load_weights(model_name+".h5" )
 	print( "Model " + model_name + " loaded from disk" )
 
 	#plot_model(model, to_file=model_name+'.png')

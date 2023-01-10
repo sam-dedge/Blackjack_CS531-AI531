@@ -26,8 +26,8 @@ import Blackjack as bj
 
 
 # get the data set
-data = open( "data_sets/blackjack5-out.data").readlines()
-tags = open( "data_sets/blackjack5-out.tags").readlines()
+data = open( "blackjack5-out.data").readlines()
+tags = open( "blackjack5-out.tags").readlines()
 
 data_clean = []
 tags_clean = []
@@ -60,11 +60,11 @@ for tag in tags:
 		first = False
 		continue
 	tag = tag[:tag.index('\n')]
-	if tag is 'h':
+	if tag == 'h':
 		tags_clean = tags_clean + [ 1.0 ]
-	elif tag is 's':
+	elif tag == 's':
 		tags_clean = tags_clean + [ 0.0 ]
-	elif tag is 'd':
+	elif tag == 'd':
 		tags_clean = tags_clean + [ 2.0 ]
 	else:
 		print('Error! Split not Implemented')
@@ -146,14 +146,14 @@ print('Test accuracy:', test_acc)
 # save model
 # taken from https://machinelearningmastery.com/save-load-keras-deep-learning-models/
 model_json = model.to_json()
-with open( "models/blackjackmodel.7.json", "w") as json_file:
+with open( "blackjackmodel.5-2.json", "w") as json_file:
 	json_file.write(model_json)
 # serialize weights to HDF5
-model.save_weights("models/blackjackmodel.7.h5")
+model.save_weights("blackjackmodel.5-2.h5")
 print( "Model saved" )
 
 
-wins, losses, ties = test_model( "blackjackmodel.7", 100, False, 2, True, False )
+wins, losses, ties = test_model( "blackjackmodel.5", 100, False, 2, True, False )
 print('Here')
 total = wins + losses + ties
 win_percentage = (wins/total)*100.0
