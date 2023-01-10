@@ -12,3 +12,8 @@ c:\user\projectFolder\blackjack> python
 .
 .
 >>> print(f'{wins} | {losses} | {ties}')
+
+
+[Go to Report](https://docs.google.com/viewer?url=https://github.com/sam-dedge/Blackjack_CS531-AI531/raw/submitted/Final%20project%20CS531.pdf)
+or
+[View in repo](https://github.com/sam-dedge/Blackjack_CS531-AI531/blob/submitted/Final%20project%20CS531.pdf)
