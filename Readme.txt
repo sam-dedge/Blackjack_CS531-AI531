@@ -1,0 +1,14 @@
+>To train a model defined in play.py on the generated data set 'blackjack5-out.data' and 'blackjack5-out.tags', run play.py
+
+*To run 10000 tests on a trained model go to cmd and navigate to the directory of the project.
+
+c:\user\projectFolder\blackjack> python
+>>> from Blackjack import *
+.
+.
+.
+>>> wins, losses, ties = test_model( "blackjackmodel.5", 10000, False, 2, True, False )
+.
+.
+.
+>>> print(f'{wins} | {losses} | {ties}')
